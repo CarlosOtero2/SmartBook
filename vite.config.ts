@@ -5,20 +5,16 @@ import dotenv from 'dotenv';
 // Cargar variables de entorno
 dotenv.config();
 
-const isProduction = process.env.NODE_ENV === 'production';
-
 export default defineConfig({
   plugins: [react()],
-  base: isProduction ? '/plataforma-smart-book/' : '/',
+  base: '/',
   build: {
     target: 'esnext',
     outDir: 'dist',
     assetsDir: 'assets',
     emptyOutDir: true,
     rollupOptions: {
-      input: {
-        main: './index.html'
-      },
+      input: './index.html',
       external: ['react', 'react-dom']
     },
     manifest: true,
