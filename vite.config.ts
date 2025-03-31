@@ -15,7 +15,9 @@ export default defineConfig({
         main: './index.html'
       },
       external: ['react', 'react-dom']
-    }
+    },
+    manifest: true,
+    sourcemap: true
   },
   server: {
     port: 3000,
