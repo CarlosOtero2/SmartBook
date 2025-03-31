@@ -1,11 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: process.env.VITE_APP_ENV === 'production' ? '/plataforma-smart-book/' : '/',
   build: {
     target: 'esnext',
     outDir: 'dist',
@@ -13,16 +12,13 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'index.html')
-      }
+        main: './index.html'
+      },
+      external: ['react', 'react-dom']
     }
   },
   server: {
-    port: 3000
-  },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src')
-    }
+    port: 3000,
+    open: true
   }
 });
