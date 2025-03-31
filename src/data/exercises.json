@@ -1,0 +1,31 @@
+{
+  "exercises": [
+    {
+      "id": "1",
+      "title": "Estructuras de Control en Python",
+      "description": "Práctica sobre el uso de estructuras de control en Python",
+      "difficulty": "Básico",
+      "category": "Programación",
+      "problem": "Escribir un programa que determine si un número es par o impar",
+      "solution": "def es_par(numero):\n    return numero % 2 == 0",
+      "hints": [
+        "Piensa en el operador módulo (%)",
+        "Un número es par si al dividirlo entre 2 el residuo es 0"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Algoritmos de Ordenamiento",
+      "description": "Implementación de algoritmos de ordenamiento básicos",
+      "difficulty": "Intermedio",
+      "category": "Algoritmos",
+      "problem": "Implementar el algoritmo de ordenamiento burbuja",
+      "solution": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr",
+      "hints": [
+        "Compara elementos adyacentes",
+        "Necesitas dos bucles anidados",
+        "Piensa en cómo intercambiar elementos"
+      ]
+    }
+  ]
+}

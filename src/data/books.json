@@ -1,0 +1,64 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "Introducción a la Programación",
+      "author": "Carlos Otero",
+      "description": "Una guía completa para principiantes en el mundo de la programación.",
+      "coverUrl": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      "keywords": ["programación", "tecnología", "principiantes"],
+      "megaLink": "https://mega.nz/file/ejemplo1",
+      "pdfUrl": "https://mega.nz/file/ejemplo1/download"
+    },
+    {
+      "id": "2",
+      "title": "Matemáticas Discretas",
+      "author": "Jonathan Pineda",
+      "description": "Conceptos avanzados de matemáticas para estudiantes universitarios.",
+      "coverUrl": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      "keywords": ["matemáticas", "universidad", "avanzado"],
+      "megaLink": "https://mega.nz/file/ejemplo2",
+      "pdfUrl": "https://mega.nz/file/Bo0kyaAQ#pzSHBMjVKqkbOXGd3O-JMbxnb0eFgvug1IQ7x7PbJh8"
+    },
+    {
+      "id": "3",
+      "title": "Estructura de datos y algoritmos",
+      "author": "Nabit Ayala",
+      "description": "Conceptos fundamentales de física moderna para estudiantes universitarios.",
+      "coverUrl": "/Estructura y arreglo.jpg",
+      "keywords": ["física", "universidad", "modernidad", "ciencia"],
+      "megaLink": "https://heyzine.com/es/admin/view?n=6f1e98fbcd4d5c8d0f9e5938a5bc50553182a751.pdf&adminKey=d2e89bae7cfc16b2#page/1",
+      "pdfUrl": "https://mega.nz/file/Bo0kyaAQ#pzSHBMjVKqkbOXGd3O-JMbxnb0eFgvug1IQ7x7PbJh8"
+    },
+    {
+      "id": "4",
+      "title": "Java",
+      "author": "Estefany Morales",
+      "description": "Conceptos fundamentales de física moderna para estudiantes universitarios.",
+      "coverUrl": "/java1.png",
+      "keywords": ["física", "universidad", "modernidad", "ciencia"],
+      "megaLink": "https://mega.nz/file/ejemplo3",
+      "pdfUrl": "https://mega.nz/file/ejemplo3/download"
+    },
+    {
+      "id": "5",
+      "title": "C++",
+      "author": "Nabit Ayala",
+      "description": "Conceptos fundamentales de física moderna para estudiantes universitarios.",
+      "coverUrl": "/C++.svg",
+      "keywords": ["física", "universidad", "modernidad", "ciencia"],
+      "megaLink": "https://mega.nz/file/ejemplo3",
+      "pdfUrl": "https://mega.nz/file/ejemplo3/download"
+    },
+    {
+      "id": "6",
+      "title": "Lógica de programación",
+      "author": "Nabit Ayala",
+      "description": "Conceptos fundamentales de física moderna para estudiantes universitarios.",
+      "coverUrl": "/logica.png",
+      "keywords": ["física", "universidad", "modernidad", "ciencia"],
+      "megaLink": "https://mega.nz/file/ejemplo3",
+      "pdfUrl": "https://mega.nz/file/ejemplo3/download"
+    }
+  ]
+}
