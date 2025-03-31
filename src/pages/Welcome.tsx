@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Book as BookIcon, GraduationCap, Search, Download, MessageSquare, BookOpen } from 'lucide-react';
-import { Footer } from '../components/Footer';
+import { Book as BookIcon, GraduationCap, MessageSquare, BookOpen } from 'lucide-react';
+import Footer from '../components/Footer';
 
 export const Welcome: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ export const Welcome: React.FC = () => {
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-8">
-            <img src="/LOGO.png" alt="SmartBook Logo" className="w-40 h-30" />
+              <img src="/LOGO.png" alt="SmartBook Logo" className="w-40 h-30" />
             </div>
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
               Bienvenido a SmartBook
@@ -56,13 +56,13 @@ export const Welcome: React.FC = () => {
               </div>
               <div className="p-6 bg-white rounded-lg shadow-md">
                 <div className="flex justify-center mb-4">
-                  <BookOpen className="h-8 w-8 text-green-600" />
+                  <GraduationCap className="h-8 w-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  Ejercicios Prácticos
+                  Ejercicios y Práctica
                 </h3>
                 <p className="text-gray-600">
-                  Practica y mejora tus habilidades con ejercicios interactivos.
+                  Practica y mejora tus conocimientos con ejercicios interactivos.
                 </p>
               </div>
               <div className="p-6 bg-white rounded-lg shadow-md">
@@ -70,10 +70,10 @@ export const Welcome: React.FC = () => {
                   <MessageSquare className="h-8 w-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  Foro de Discusión
+                  Comunidad y Foro
                 </h3>
                 <p className="text-gray-600">
-                  Participa en discusiones y comparte conocimientos con otros usuarios.
+                  Únete a nuestra comunidad y comparte conocimientos con otros estudiantes.
                 </p>
               </div>
             </div>

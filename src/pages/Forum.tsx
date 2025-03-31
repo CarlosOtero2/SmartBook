@@ -1,11 +1,26 @@
 import React, { useState } from 'react';
 import { Navigation } from '../components/Navigation';
-import { Footer } from '../components/Footer';
-import { ForumPost, ForumReply } from '../types/forum';
+import Footer from '../components/Footer';
 import { format } from 'date-fns';
 import { MessageSquare, Send } from 'lucide-react';
 
-export const Forum: React.FC = () => {
+interface ForumPost {
+  id: string;
+  title: string;
+  content: string;
+  author: string;
+  timestamp: Date;
+  replies: ForumReply[];
+}
+
+interface ForumReply {
+  id: string;
+  content: string;
+  author: string;
+  timestamp: Date;
+}
+
+const Forum = () => {
   const [posts, setPosts] = useState<ForumPost[]>([]);
   const [newPost, setNewPost] = useState({ title: '', content: '' });
   const [replyContent, setReplyContent] = useState<string>('');
@@ -13,39 +28,53 @@ export const Forum: React.FC = () => {
 
   const handleSubmitPost = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!newPost.title.trim() || !newPost.content.trim()) return;
+    if (!newPost.title.trim() || !newPost.content.trim()) {
+      alert('Por favor, complete todos los campos');
+      return;
+    }
 
-    const post: ForumPost = {
-      id: Date.now().toString(),
-      title: newPost.title,
-      content: newPost.content,
-      author: 'Usuario Anónimo',
-      timestamp: new Date(),
-      replies: [],
-    };
+    try {
+      const post: ForumPost = {
+        id: Date.now().toString(),
+        title: newPost.title,
+        content: newPost.content,
+        author: 'Usuario Anónimo',
+        timestamp: new Date(),
+        replies: [],
+      };
 
-    setPosts([post, ...posts]);
-    setNewPost({ title: '', content: '' });
+      setPosts([post, ...posts]);
+      setNewPost({ title: '', content: '' });
+    } catch (error) {
+      console.error('Error al crear el post:', error);
+      alert('Error al crear el post. Por favor, inténtelo de nuevo.');
+    }
   };
 
   const handleSubmitReply = (postId: string) => {
-    if (!replyContent.trim()) return;
+    if (!replyContent.trim()) {
+      alert('Por favor, escriba un comentario');
+      return;
+    }
 
-    const reply: ForumReply = {
-      id: Date.now().toString(),
-      content: replyContent,
-      author: 'Usuario Anónimo',
-      timestamp: new Date(),
-    };
+    try {
+      const reply: ForumReply = {
+        id: Date.now().toString(),
+        content: replyContent,
+        author: 'Usuario Anónimo',
+        timestamp: new Date(),
+      };
 
-    setPosts(posts.map(post => 
-      post.id === postId
-        ? { ...post, replies: [...post.replies, reply] }
-        : post
-    ));
-
-    setReplyContent('');
-    setActivePost(null);
+      setPosts(posts.map(post => 
+        post.id === postId 
+          ? { ...post, replies: [...post.replies, reply] } 
+          : post
+      ));
+      setReplyContent('');
+    } catch (error) {
+      console.error('Error al crear el comentario:', error);
+      alert('Error al crear el comentario. Por favor, inténtelo de nuevo.');
+    }
   };
 
   return (
@@ -158,3 +187,5 @@ export const Forum: React.FC = () => {
     </div>
   );
 };
+
+export { Forum };
