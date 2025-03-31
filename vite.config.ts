@@ -1,10 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import dotenv from 'dotenv';
 
-// https://vitejs.dev/config/
+// Cargar variables de entorno
+dotenv.config();
+
+const isProduction = process.env.NODE_ENV === 'production';
+
 export default defineConfig({
   plugins: [react()],
-  base: process.env.VITE_APP_ENV === 'production' ? '/plataforma-smart-book/' : '/',
+  base: isProduction ? '/plataforma-smart-book/' : '/',
   build: {
     target: 'esnext',
     outDir: 'dist',
